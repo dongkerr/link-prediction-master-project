@@ -1,0 +1,79 @@
+
+(base) abacus-1% conda activate p38
+(p38) abacus-1% python WDK_year_traintestg2_v2.py
+2023-08-21 08:49:05.917248: I tensorflow/core/platform/cpu_feature_guard.cc:193]
+ This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (on
+eDNN) to use the following CPU instructions in performance-critical operations:
+ SSE4.1 SSE4.2 AVX AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate comp
+iler flags.
+2023-08-21 08:49:06.981246: I tensorflow/core/platform/cpu_feature_guard.cc:193]
+ This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (on
+eDNN) to use the following CPU instructions in performance-critical operations:
+ SSE4.1 SSE4.2 AVX AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate comp
+iler flags.
+2023-08-21 08:49:06.988378: I tensorflow/core/common_runtime/process_util.cc:146
+] Creating new thread pool with default inter op setting: 2. Tune using inter_op
+_parallelism_threads for best performance.
+R.number_of_nodes: <bound method Graph.number_of_nodes of <networkx.classes.digr
+aph.DiGraph object at 0x7f45b5dca220>>
+R.number_of_edges: 478068
+StellarDiGraph: Directed multigraph
+ Nodes: 114306, Edges: 478068
+
+ Node types:
+  default: [114306]
+    Features: none
+    Edge types: default-default->default
+
+ Edge types:
+    default-default->default: [478068]
+        Weights: range=[0, 3.9e+12], mean=2.28363e+08, std=9.01601e+09
+        Features: none
+** Sampled 47806 positive and 47806 negative edges. **
+StellarDiGraph: Directed multigraph
+ Nodes: 114306, Edges: 430262
+
+ Node types:
+  default: [114306]
+    Features: none
+    Edge types: default-default->default
+
+ Edge types:
+    default-default->default: [430262]
+        Weights: range=[0.027065, 3.9e+12], mean=2.31414e+08, std=9.38385e+09
+        Features: none
+** Sampled 43026 positive and 43026 negative edges. **
+StellarDiGraph: Directed multigraph
+ Nodes: 114306, Edges: 387236
+
+ Node types:
+  default: [114306]
+    Features: none
+    Edge types: default-default->default
+
+ Edge types:
+    default-default->default: [387236]
+        Weights: range=[0.027065, 3.9e+12], mean=2.32086e+08, std=9.69785e+09
+        Features: none
+                 Number of Examples  ...                                    Use
+Split                                ...
+Training Set                  64539  ...              Train the Link Classifier
+Model Selection               21513  ...  Select the best Link Classifier model
+Test set                      95612  ...      Evaluate the best Link Classifier
+
+[3 rows x 4 columns]
+Number of random walks for 'Train Graph': 1143060
+Best result from 'operator_l2'
+                   ROC AUC score
+name
+operator_hadamard       0.924782
+operator_l1             0.929197
+operator_l2             0.931967
+Number of random walks for 'Test Graph': 1143060
+ROC AUC score on test set using 'operator_l2': 0.8898618755331518
+(p38) abacus-1% tmux capture-pane -b temp-capture-buffer -S -
+tmux: /home/user/weizi/miniconda3/envs/p38/lib/libtinfo.so.6: no version informa
+tion available (required by tmux)
+
